@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    title: {
+        text: "Donald Trumps VERBAL Emotions"
+    },
+    data: [{
+        type: "pie",
+        startAngle: 240,
+        yValueFormatString: "##0.00\"%\"",
+        indexLabel: "{label} {y}",
+        dataPoints: [
+            {y: 10, label: "Anger"},
+            {y: 10, label: "Fear"},
+            {y: 10, label: "Joy"},
+            {y: 10, label: "Sadness"},
+            {y: 20, label: "Analytical"},
+            {y: 20, label: "Confident"},
+            {y: 20, label: "Tentative"}
+        ]
+    }]
+});
+chart.render();
+
+}
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
